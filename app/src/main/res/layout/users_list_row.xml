@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="users"
+            type="com.cognizant.evaluation.albums.models.Users" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="2dp"
+        card_view:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:background="?android:selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/list_row_icon"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:src="@mipmap/ic_launcher"/>
+            />
+
+            <TextView
+                android:id="@+id/list_row_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_gravity="center"
+                android:text="@{users.getName()}"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
